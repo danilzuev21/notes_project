@@ -1924,8 +1924,8 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     axios.get("/notes/list/data").then(function (response) {
-      console.log(response);
-      _this.notes = response;
+      console.log(response.data);
+      _this.notes = response.data.notes;
     })["catch"](function (error) {
       return console.log(error);
     });

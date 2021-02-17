@@ -42,8 +42,8 @@ export default {
     axios
       .get("/notes/list/data")
       .then((response) => {
-          console.log(response);
-          this.notes = response;
+          console.log(response.data);
+          this.notes = response.data.notes;
       })
       .catch(error => console.log(error));;
     console.log(this.notes);

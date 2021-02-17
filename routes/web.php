@@ -17,8 +17,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/notes/list/data', [
-    'as' => 'notes', 'uses' => 'MainController@showNotesData'
-]);
+Route::get('/notes/list/data', [App\Http\Controllers\MainController::class, 'showNotesData']);
 
 Route::get('/{any}', [App\Http\Controllers\MainController::class, 'index'])->where('any','.*')->name('welcome');
